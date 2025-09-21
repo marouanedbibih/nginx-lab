@@ -1,0 +1,112 @@
+services:
+  # First instance of DevOps Bootcamp app
+  app-1:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: app:latest
+    container_name: app-1
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - INSTANCE_ID=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - ./docker/logs/app1:/app/logs
+    networks:
+      - devops-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app1.rule=Host(`localhost`) && PathPrefix(`/app1`)"
+      - "traefik.http.services.app1.loadbalancer.server.port=3000"
+
+  # Second instance of DevOps Bootcamp app
+  app-2:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: app:latest
+    container_name: app-2
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - INSTANCE_ID=2
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - ./docker/logs/app2:/app/logs
+    networks:
+      - devops-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app2.rule=Host(`localhost`) && PathPrefix(`/app2`)"
+      - "traefik.http.services.app2.loadbalancer.server.port=3000"
+
+  # Third instance of DevOps Bootcamp app
+  app-3:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: app:latest
+    container_name: app-3
+    ports:
+      - "3003:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - INSTANCE_ID=3
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - ./docker/logs/app3:/app/logs
+    networks:
+      - devops-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app3.rule=Host(`localhost`) && PathPrefix(`/app3`)"
+      - "traefik.http.services.app3.loadbalancer.server.port=3000"
+  nginx-lb:
+    image: nginx:alpine
+    container_name: nginx-lb
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/certs/server.crt:/etc/nginx/ssl/server.crt:ro
+      - ./docker/certs/server.key:/etc/nginx/ssl/server.key:ro
+    networks:
+      - devops-network
+    depends_on:
+      - app-1
+      - app-2
+      - app-3
+    restart: unless-stopped
+
+networks:
+  devops-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local

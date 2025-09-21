@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Bootcamp - Master Modern DevOps Tools</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code-branch"></i>
+                <span>DevOps Bootcamp</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#curriculum">Curriculum</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Master <span class="gradient-text">DevOps</span> in 12 Weeks
+                </h1>
+                <p class="hero-description">
+                    Learn industry-leading DevOps tools and practices. From containerization to orchestration, 
+                    CI/CD pipelines to infrastructure as code - become a DevOps expert.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Learning</button>
+                    <button class="btn btn-secondary">View Curriculum</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Job Placement</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Weeks</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card docker">
+                        <img src="imgs/docker.png" alt="Docker">
+                    </div>
+                    <div class="card kubernetes">
+                        <img src="imgs/kubernetes-logo.svg.png" alt="Kubernetes">
+                    </div>
+                    <div class="card jenkins">
+                        <img src="imgs/jenkins-logo.svg.png" alt="Jenkins">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>Master These DevOps Tools</h2>
+                <p>Learn the most in-demand tools used by DevOps professionals worldwide</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/docker.png" alt="Docker">
+                    </div>
+                    <h3>Docker</h3>
+                    <p>Containerization platform for building, shipping, and running applications</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/kubernetes-logo.svg.png" alt="Kubernetes">
+                    </div>
+                    <h3>Kubernetes</h3>
+                    <p>Container orchestration platform for managing containerized applications</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/jenkins-logo.svg.png" alt="Jenkins">
+                    </div>
+                    <h3>Jenkins</h3>
+                    <p>Open-source automation server for CI/CD pipelines</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/terraform.png" alt="Terraform">
+                    </div>
+                    <h3>Terraform</h3>
+                    <p>Infrastructure as Code tool for building, changing, and versioning infrastructure</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/argo-cd.png" alt="ArgoCD">
+                    </div>
+                    <h3>ArgoCD</h3>
+                    <p>Declarative GitOps continuous delivery tool for Kubernetes</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/helm.png" alt="Helm">
+                    </div>
+                    <h3>Helm</h3>
+                    <p>The package manager for Kubernetes applications</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/gitlab.png" alt="GitLab">
+                    </div>
+                    <h3>GitLab</h3>
+                    <p>Complete DevOps platform with integrated CI/CD capabilities</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/grafana.png" alt="Grafana">
+                    </div>
+                    <h3>Grafana</h3>
+                    <p>Analytics and monitoring platform for metrics and logs</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/harbor-logo.png" alt="Harbor">
+                    </div>
+                    <h3>Harbor</h3>
+                    <p>Enterprise-grade container registry with security and compliance features</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/k3s.png" alt="K3s">
+                    </div>
+                    <h3>K3s</h3>
+                    <p>Lightweight Kubernetes distribution for edge and IoT</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/longhorn-logo.png" alt="Longhorn">
+                    </div>
+                    <h3>Longhorn</h3>
+                    <p>Cloud-native distributed block storage for Kubernetes</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <img src="imgs/rke2-logo.jpeg" alt="RKE2">
+                    </div>
+                    <h3>RKE2</h3>
+                    <p>Rancher Kubernetes Engine 2 - enterprise-grade Kubernetes distribution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="curriculum">
+        <div class="container">
+            <div class="section-header">
+                <h2>12-Week Curriculum</h2>
+                <p>Comprehensive learning path from basics to advanced DevOps practices</p>
+            </div>
+            <div class="curriculum-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 1-2: Foundation</h3>
+                        <p>Linux fundamentals, Git version control, and basic networking concepts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 3-4: Containerization</h3>
+                        <p>Docker fundamentals, container orchestration basics, and best practices</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 5-6: Kubernetes</h3>
+                        <p>Kubernetes architecture, pods, services, deployments, and Helm charts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 7-8: CI/CD</h3>
+                        <p>Jenkins, GitLab CI, automated testing, and deployment strategies</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 9-10: Infrastructure as Code</h3>
+                        <p>Terraform, Ansible, and infrastructure automation</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Weeks 11-12: Monitoring & Security</h3>
+                        <p>Grafana, Prometheus, security best practices, and final project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our DevOps Bootcamp?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h3>Expert Instructors</h3>
+                                <p>Learn from industry professionals with years of DevOps experience</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>
+                                <h3>Hands-on Labs</h3>
+                                <p>Practical exercises and real-world projects to reinforce learning</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h3>Industry Certifications</h3>
+                                <p>Prepare for CKA, CKAD, and other industry-recognized certifications</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h3>Career Support</h3>
+                                <p>Resume building, interview preparation, and job placement assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Graduates</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Partner Companies</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">4.9</span>
+                                <span class="stat-label">Average Rating</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">$95k</span>
+                                <span class="stat-label">Average Salary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ready to Start Your DevOps Journey?</h2>
+                <p>Get in touch with us to learn more about the program</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@devopsbootcamp.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code-branch"></i>
+                        <span>DevOps Bootcamp</span>
+                    </div>
+                    <p>Master modern DevOps tools and practices in 12 weeks. Start your journey to becoming a DevOps expert today.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DevOps Bootcamp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
