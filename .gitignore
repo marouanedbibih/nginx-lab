@@ -176,7 +176,6 @@ ehthumbs.db
 Thumbs.db
 
 # Development files
-*.md
 .editorconfig
 .eslintrc*
 .prettierrc*
